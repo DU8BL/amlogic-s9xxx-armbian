@@ -636,7 +636,7 @@ packit_kernel() {
     echo -e "${SUCCESS} The [ modules-${kernel_outname}.tar.gz ] file is packaged."
 
     cd ${out_kernel}/header
-    tar -czf header-${kernel_outname}.tar.gz *
+    tar -czf header-${kernel_outname}.tar.gz * .config
     mv -f *.tar.gz ${out_kernel}/${kernel_version}
     echo -e "${SUCCESS} The [ header-${kernel_outname}.tar.gz ] file is packaged."
 }
